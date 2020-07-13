@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\marti\Desktop\CMS.Users\CMS.Users.WebApi\CMS.Users.WebApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\marti\Desktop\CMS.Users\CMS.Users.WebApi\CMS.Users.WebApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="MediatR" Version="8.0.2" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.5" />
+    <PackageReference Include="Microsoft.OpenApi" Version="1.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CMS.Users.Data\CMS.Users.Data.csproj" />
+    <ProjectReference Include="..\CMS.Users.Mediator.Types\CMS.Users.Mediator.Types.csproj" />
+    <ProjectReference Include="..\CMS.Users.Mediator\CMS.Users.Mediator.csproj" />
+    <ProjectReference Include="..\CMS.Users.WebApi.Requests\CMS.Users.WebApi.Requests.csproj" />
+  </ItemGroup>
+
+
+</Project>
